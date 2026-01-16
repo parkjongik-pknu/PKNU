@@ -5,3 +5,23 @@ GMM is a probabilistic clustering method by assuming distribution to the covaria
 
 CWM is a clustering method about the relationship between a response variable Y and explanatory variables X. While GMM focuses on the distribution of X, CWM focuses on the joint probability distribution f(x,y)
 
+This repository contains GMM and CWM implementation in R.
+
+HOW TO USE:
+
+In GMM
+clustering_gmm <- function(X, g=6, max_iter=200, tol=1e-6, init_methods="kmeans")
+
+X : Data you want to use in clustering analysis(explanatory variables)
+g : The number of cluster(if you choose 6, there is one cluster, two clusters, ... up to six clusters)
+init_methods : you can choose "kmeans", "kmedoids", "heirarchical"
+
+In CWM
+clustering_cwm <- function(X, Y, g=6, max_iter=200, tol=1e-6, init_method="kmeans")
+
+X : a explanatory variables you want to use in clustering analysis
+Y : response variables you want to use in clustering analysis
+g : The number of cluster(if you choose 6, there is one cluster, two clusters, ... up to six clusters)
+init_methods : you can choose "kmeans", "kmedoids", "heirarchical"
+
+
